@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express";
 import cors from "cors";
 import * as dotenv from "dotenv";
-import getDBConnection from "./database";
+import Database from "./Database";
 
 dotenv.config({ path: "../.env" });
 
@@ -17,7 +17,7 @@ app.use(
 );
 
 app.get("/", async (req: Request, res: Response) => {
-  const connection = await getDBConnection();
+  const connection = await Database.getConnection();
   const queryResult = await connection?.execute(`select 'XXX' from dual`);
   res.json({ rows: queryResult?.rows });
 });
