@@ -2,9 +2,8 @@ import cors from "cors";
 import * as dotenv from "dotenv";
 import express, { Response } from "express";
 
+import employeesWithMostAds from "./routers/employeesWithMostAds";
 import mostUsedMaintenances from "./routers/mostUsedMaintenances";
-
-import "module-alias/register";
 
 dotenv.config({ path: "../.env" });
 
@@ -24,6 +23,7 @@ app.get("/", (_, res: Response) => {
 });
 
 app.use("/most-used-maintenances", mostUsedMaintenances);
+app.use("/employees-with-most-ads", employeesWithMostAds);
 
 app.listen(port, () => {
     console.log(`Server listening at http://localhost:${port}`);
