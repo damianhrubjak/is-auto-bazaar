@@ -2,8 +2,12 @@ import cors from "cors";
 import * as dotenv from "dotenv";
 import express, { Response } from "express";
 
+import countOfVehiclesForEveryStateAndBrand from "./routers/countOfVehiclesForEveryStateAndBrand";
+import customersWhoBoughtCar from "./routers/customersWhoBoughtCar";
 import employeesWithMostAds from "./routers/employeesWithMostAds";
 import mostUsedMaintenances from "./routers/mostUsedMaintenances";
+import showVehiclesFromState from "./routers/showVehiclesFromState";
+import topThreeEmployeesForEveryMaintenance from "./routers/topThreeEmployeesForEveryMaintenance";
 
 dotenv.config({ path: "../.env" });
 
@@ -24,6 +28,16 @@ app.get("/", (_, res: Response) => {
 
 app.use("/most-used-maintenances", mostUsedMaintenances);
 app.use("/employees-with-most-ads", employeesWithMostAds);
+app.use("/show-vehicles-from-state", showVehiclesFromState);
+app.use(
+    "/count-of-vehicles-for-every-state-and-brand",
+    countOfVehiclesForEveryStateAndBrand
+);
+app.use(
+    "/top-three-employees-for-every-maintenance",
+    topThreeEmployeesForEveryMaintenance
+);
+app.use("/customers-who-bought-car", customersWhoBoughtCar);
 
 app.listen(port, () => {
     console.log(`Server listening at http://localhost:${port}`);
