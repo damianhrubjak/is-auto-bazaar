@@ -44,16 +44,13 @@ function TopThreeEmployees() {
                                             key={`${id}-${description}`}
                                             className="flex w-full items-center justify-evenly"
                                         >
-                                            <p className="w-1/4 text-lg">
+                                            <p className="w-5/12 text-lg">
                                                 {name}
                                             </p>
-                                            <p className="w-1/4 text-lg">
+                                            <p className="w-5/12 text-lg">
                                                 {last_name}
                                             </p>
-                                            <p className="w-5/12 text-lg">
-                                                {description}
-                                            </p>
-                                            <p className="w-1/12 text-lg">
+                                            <p className="w-2/12 text-lg">
                                                 {count}
                                             </p>
                                         </div>
