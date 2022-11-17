@@ -2,11 +2,9 @@ import { useState } from "react";
 
 import { NavLink } from "react-router-dom";
 
-import {
-    ChevronDoubleRightIcon,
-    DocumentMagnifyingGlassIcon,
-    HomeIcon,
-} from "@heroicons/react/24/solid";
+import { ChevronDoubleRightIcon } from "@heroicons/react/24/solid";
+
+import navLinks from "@/constants/links";
 
 import NavigationLinkContent from "../NavigationLinkContent";
 import NavigationLinkIcon from "../NavigationLinkIcon";
@@ -47,7 +45,7 @@ function NavBar() {
                     >
                         <NavigationLinkContent
                             content={text}
-                            className="text-xl font-bold transition duration-300 group-hover:text-black"
+                            className="text-lg font-bold transition duration-300 group-hover:text-black"
                         />
                         <NavigationLinkIcon
                             // \shadow-transparent
@@ -61,22 +59,3 @@ function NavBar() {
     );
 }
 export default NavBar;
-
-const navLinks = [
-    {
-        to: "/",
-        text: "Domov",
-        icon: (
-            <HomeIcon className="w-8 fill-fuchsia-500 transition duration-300 group-hover:fill-black" />
-        ),
-    },
-    {
-        to: "most-used-maintenances",
-        text: "Najpoužívanejšie údržby",
-        icon: (
-            <span className="h-8 w-8 rounded-md text-center text-xl font-bold text-fuchsia-500 transition duration-300 group-hover:text-black">
-                1
-            </span>
-        ),
-    },
-];
