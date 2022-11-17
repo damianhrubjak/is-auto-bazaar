@@ -18,7 +18,7 @@ function NavBar() {
         <div
             className={`${
                 isExpanded ? "translate-x-0" : "-translate-x-64"
-            } fixed left-0 top-0 z-30 h-screen w-80 bg-black bg-gradient-to-b transition duration-500`}
+            } fixed left-0 top-0 z-30 h-screen w-80 bg-black/50 bg-gradient-to-b backdrop-blur-md transition duration-500`}
         >
             <button
                 className="flex w-full items-center"
