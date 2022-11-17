@@ -17,3 +17,13 @@ export interface EmployeeWithMostAds {
     priezvisko: string;
     pocet_predajov: number;
 }
+
+export interface CountOfVehicleForEveryStateAndBrand {
+    year: number;
+    brands: Brand[];
+}
+
+export interface Brand {
+    brand: string;
+    count: number;
+}
