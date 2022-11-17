@@ -5,6 +5,7 @@ import AppLayout from "@/layouts/AppLayout";
 import EmployeesWithMostAds from "@/pages/EmployeesWithMostAds";
 import Home from "@/pages/Home";
 import MostUsedMaintenances from "@/pages/MostUsedMaintenances";
+import VehiclesFromState from "@/pages/VehiclesFromState";
 
 const router = createBrowserRouter([
     {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
             {
                 path: "employees-with-most-ads",
                 element: <EmployeesWithMostAds />,
+            },
+            {
+                path: "show-vehicles-from-state",
+                element: <VehiclesFromState />,
             },
         ],
     },

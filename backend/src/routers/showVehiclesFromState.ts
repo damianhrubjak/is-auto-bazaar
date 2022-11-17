@@ -10,7 +10,7 @@ showVehiclesFromState.get("/", async (req: Request, res: Response) => {
 
     const connection = await Database.getConnection();
     const queryResult = await connection?.execute(
-        `SELECT * FROM TABLE(WKSP_AUTOBAZAR.vypis_vozidla_z_krajiny('${fromState}', ${countOfMaintenances}))`
+        `SELECT COLUMN_VALUE as "vin" FROM TABLE(WKSP_AUTOBAZAR.vypis_vozidla_z_krajiny('${fromState}', ${countOfMaintenances}))`
     );
     res.json({ data: queryResult?.rows });
 });
