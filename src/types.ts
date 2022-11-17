@@ -10,3 +10,10 @@ export interface MostUsedMaintenance {
     pocet: number;
     popis: string;
 }
+
+export interface EmployeeWithMostAds {
+    rod_cislo: string;
+    meno: string;
+    priezvisko: string;
+    pocet_predajov: number;
+}

@@ -2,6 +2,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 
 import NavBar from "@/components/NavBar";
 import AppLayout from "@/layouts/AppLayout";
+import EmployeesWithMostAds from "@/pages/EmployeesWithMostAds";
 import Home from "@/pages/Home";
 import MostUsedMaintenances from "@/pages/MostUsedMaintenances";
 
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
             {
                 path: "most-used-maintenances",
                 element: <MostUsedMaintenances />,
+            },
+            {
+                path: "employees-with-most-ads",
+                element: <EmployeesWithMostAds />,
             },
         ],
     },
