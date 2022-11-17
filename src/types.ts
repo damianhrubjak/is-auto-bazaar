@@ -35,3 +35,13 @@ export interface TopEmployee {
     last_name: string;
     count: number;
 }
+
+export interface CustomerWhoBoughtCar {
+    id: string;
+    name: string;
+    surname: string;
+    id_vehicle: string;
+    price: number;
+    brand_vehicle: string;
+    model_vehicle: string;
+}

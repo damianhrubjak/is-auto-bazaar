@@ -26,10 +26,12 @@ function MostUsedMaintenances() {
                                 key={`${rod_cislo}`}
                                 className="flex w-1/3 items-center justify-evenly"
                             >
-                                <p>{rod_cislo}</p>
-                                <p>{meno}</p>
-                                <p>{priezvisko}</p>
-                                <p>{pocet_predajov}</p>
+                                <p className="text-lg font-bold text-purple-500">
+                                    {rod_cislo}
+                                </p>
+                                <p className="text-lg">{meno}</p>
+                                <p className="text-lg">{priezvisko}</p>
+                                <p className="text-lg">{pocet_predajov}</p>
                             </div>
                         )
                     )}

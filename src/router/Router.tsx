@@ -3,6 +3,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import NavBar from "@/components/NavBar";
 import AppLayout from "@/layouts/AppLayout";
 import CountOfVehiclesForEveryStateAndBrand from "@/pages/CountOfVehiclesForEveryStateAndBrand";
+import CustomersWhoBoughtCar from "@/pages/CustomersWhoBoughtCar";
 import EmployeesWithMostAds from "@/pages/EmployeesWithMostAds";
 import Home from "@/pages/Home";
 import MostUsedMaintenances from "@/pages/MostUsedMaintenances";
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
             {
                 path: "top-three-employees-for-every-maintenance",
                 element: <TopThreeEmployees />,
+            },
+            {
+                path: "customers-who-bought-car",
+                element: <CustomersWhoBoughtCar />,
             },
         ],
     },

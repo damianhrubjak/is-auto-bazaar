@@ -10,8 +10,8 @@ customersWhoBoughtCar.get("/", async (req: Request, res: Response) => {
 
     const connection = await Database.getConnection();
     const queryResult = await connection?.execute(
-        `select osoba.rod_cislo, osoba.meno, osoba.priezvisko, vozidlo.id_vozidla, inzerat.cena,
-        znacka_vozidla.nazov, model_vozidla.nazov
+        `select osoba.rod_cislo "id", osoba.meno "name", osoba.priezvisko "surname", vozidlo.id_vozidla "id_vehicle", inzerat.cena "price",
+        znacka_vozidla.nazov "brand_vehicle", model_vozidla.nazov "model_vehicle"
             from WKSP_AUTOBAZAR.osoba
                 join WKSP_AUTOBAZAR.zakaznik on(osoba.rod_cislo = zakaznik.rod_cislo)
                 join WKSP_AUTOBAZAR.kupa on(zakaznik.id_zakaznika = kupa.id_kupy)

@@ -25,8 +25,12 @@ function MostUsedMaintenances() {
                             key={`${pozicia}-${popis}`}
                             className="flex w-1/3 items-center justify-start"
                         >
-                            <p className="w-16">{pocet}</p>
-                            <p className="w-[calc(100%-4rem)]">{popis}</p>
+                            <p className="w-16 text-lg font-bold text-purple-500">
+                                {pocet}
+                            </p>
+                            <p className="w-[calc(100%-4rem)] text-lg">
+                                {popis}
+                            </p>
                         </div>
                     ))}
             </div>
