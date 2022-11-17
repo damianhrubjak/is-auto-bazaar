@@ -27,3 +27,11 @@ export interface Brand {
     brand: string;
     count: number;
 }
+
+export interface TopEmployee {
+    id: number;
+    description: string;
+    name: string;
+    last_name: string;
+    count: number;
+}

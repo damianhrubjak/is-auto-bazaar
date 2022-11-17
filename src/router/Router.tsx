@@ -6,6 +6,7 @@ import CountOfVehiclesForEveryStateAndBrand from "@/pages/CountOfVehiclesForEver
 import EmployeesWithMostAds from "@/pages/EmployeesWithMostAds";
 import Home from "@/pages/Home";
 import MostUsedMaintenances from "@/pages/MostUsedMaintenances";
+import TopThreeEmployees from "@/pages/TopThreeEmployees";
 import VehiclesFromState from "@/pages/VehiclesFromState";
 
 const router = createBrowserRouter([
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
             {
                 path: "count-of-vehicles-for-every-state-and-brand",
                 element: <CountOfVehiclesForEveryStateAndBrand />,
+            },
+            {
+                path: "top-three-employees-for-every-maintenance",
+                element: <TopThreeEmployees />,
             },
         ],
     },
