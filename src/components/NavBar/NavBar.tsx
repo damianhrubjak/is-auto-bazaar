@@ -71,10 +71,12 @@ const navLinks = [
         ),
     },
     {
-        to: "report",
-        text: "Report",
+        to: "most-used-maintenances",
+        text: "Najpoužívanejšie údržby",
         icon: (
-            <DocumentMagnifyingGlassIcon className="w-8 fill-fuchsia-500 transition duration-300 group-hover:fill-black" />
+            <span className="h-8 w-8 rounded-md text-center text-xl font-bold text-fuchsia-500 transition duration-300 group-hover:text-black">
+                1
+            </span>
         ),
     },
 ];

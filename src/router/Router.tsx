@@ -3,7 +3,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import NavBar from "@/components/NavBar";
 import AppLayout from "@/layouts/AppLayout";
 import Home from "@/pages/Home";
-import Report from "@/pages/Report";
+import MostUsedMaintenances from "@/pages/MostUsedMaintenances";
 
 const router = createBrowserRouter([
     {
@@ -18,7 +18,10 @@ const router = createBrowserRouter([
         ),
         children: [
             { index: true, element: <Home /> },
-            { path: "report", element: <Report /> },
+            {
+                path: "most-used-maintenances",
+                element: <MostUsedMaintenances />,
+            },
         ],
     },
 ]);
