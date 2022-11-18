@@ -6,6 +6,7 @@ import countOfVehiclesForEveryStateAndBrand from "./routers/countOfVehiclesForEv
 import customersWhoBoughtCar from "./routers/customersWhoBoughtCar";
 import employeesWithMostAds from "./routers/employeesWithMostAds";
 import mostUsedMaintenances from "./routers/mostUsedMaintenances";
+import sellersWhoNeverSoldCar from "./routers/sellersWhoNeverSoldCar";
 import showVehiclesFromState from "./routers/showVehiclesFromState";
 import topThreeEmployeesForEveryMaintenance from "./routers/topThreeEmployeesForEveryMaintenance";
 
@@ -38,6 +39,7 @@ app.use(
     topThreeEmployeesForEveryMaintenance
 );
 app.use("/customers-who-bought-car", customersWhoBoughtCar);
+app.use("/sellers-who-never-sold-car", sellersWhoNeverSoldCar);
 
 app.listen(port, () => {
     console.log(`Server listening at http://localhost:${port}`);

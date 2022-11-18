@@ -7,6 +7,7 @@ import CustomersWhoBoughtCar from "@/pages/CustomersWhoBoughtCar";
 import EmployeesWithMostAds from "@/pages/EmployeesWithMostAds";
 import Home from "@/pages/Home";
 import MostUsedMaintenances from "@/pages/MostUsedMaintenances";
+import SellersWhoNeverSoldCar from "@/pages/SellersWhoNeverSoldCar";
 import TopThreeEmployees from "@/pages/TopThreeEmployees";
 import VehiclesFromState from "@/pages/VehiclesFromState";
 
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
             {
                 path: "customers-who-bought-car",
                 element: <CustomersWhoBoughtCar />,
+            },
+            {
+                path: "sellers-who-never-sold-car",
+                element: <SellersWhoNeverSoldCar />,
             },
         ],
     },

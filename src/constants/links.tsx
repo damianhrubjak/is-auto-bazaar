@@ -40,5 +40,10 @@ const navLinks = [
         text: "Zákazníci vozidiel podľa roku a ceny",
         icon: <span className={`${numberIconClasses}`}>6</span>,
     },
+    {
+        to: "sellers-who-never-sold-car",
+        text: "Predajcovia, ktorí nikdy nepredali auto",
+        icon: <span className={`${numberIconClasses}`}>7</span>,
+    },
 ];
 export default navLinks;

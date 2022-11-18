@@ -45,3 +45,10 @@ export interface CustomerWhoBoughtCar {
     brand_vehicle: string;
     model_vehicle: string;
 }
+
+export interface SellerWhoNeverSoldCar {
+    id: number;
+    id_osoba: string;
+    name: string;
+    surname: string;
+}
