@@ -2,30 +2,29 @@ import { useMemo } from "react";
 
 import { Bar } from "react-chartjs-2";
 
-import { CountOfVehicleForEveryStateAndBrand, GraphDataset } from "@/types";
+import { CountOfElectricVehiclesFromCountry, GraphDataset } from "@/types";
 
 import "chart.js/auto";
 
 type Props = {
-    data: CountOfVehicleForEveryStateAndBrand[];
+    data: CountOfElectricVehiclesFromCountry[];
 };
 
 function GraphView({ data }: Props) {
     const graphLabels = useMemo(() => {
-        return data[0].brands.map(({ brand }) => brand);
+        return data.map(({ country }) => country);
     }, [data]);
 
     const graphDatasets = useMemo(() => {
         const datasets: GraphDataset[] = [];
-        data.map(({ year, brands }) => {
-            datasets.push({
-                id: year.toString(),
-                label: `Vozidlá za rok ${year}`,
-                data: brands.map(({ count }) => count),
-                hidden: true,
-                fill: true,
-                borderRadius: 4,
-            });
+
+        datasets.push({
+            id: "country",
+            label: `Elektrické vozidlá`,
+            data: data.map(({ count }) => count),
+            hidden: false,
+            fill: true,
+            borderRadius: 4,
         });
 
         return datasets;

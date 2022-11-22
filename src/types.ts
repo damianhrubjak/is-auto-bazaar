@@ -74,3 +74,8 @@ export interface VehicleInSpecificTime {
     brand: string;
     model: string;
 }
+
+export interface CountOfElectricVehiclesFromCountry {
+    country: string;
+    count: number;
+}

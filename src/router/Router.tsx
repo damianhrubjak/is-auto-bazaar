@@ -2,6 +2,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 
 import NavBar from "@/components/NavBar";
 import AppLayout from "@/layouts/AppLayout";
+import CountOfElectricVehiclesFromCountries from "@/pages/CountOfElectricVehiclesFromCountries";
 import CountOfVehiclesForEveryStateAndBrand from "@/pages/CountOfVehiclesForEveryStateAndBrand";
 import CustomersWhoBoughtCar from "@/pages/CustomersWhoBoughtCar";
 import EmployeesWithMostAds from "@/pages/EmployeesWithMostAds";
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
             {
                 path: "vehicles-in-specific-time",
                 element: <VehiclesInSpecificTime />,
+            },
+            {
+                path: "count-of-electric-vehicles-from-countries",
+                element: <CountOfElectricVehiclesFromCountries />,
             },
         ],
     },
