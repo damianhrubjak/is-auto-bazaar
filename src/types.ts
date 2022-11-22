@@ -52,3 +52,12 @@ export interface SellerWhoNeverSoldCar {
     name: string;
     surname: string;
 }
+
+export interface GraphDataset {
+    id: string;
+    label: string;
+    data: number[];
+    hidden?: boolean;
+    fill?: boolean;
+    borderRadius?: number;
+}

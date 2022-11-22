@@ -2,6 +2,9 @@ import Heading from "@/components/Heading";
 import StatusBar from "@/components/StatusBar";
 import useMostUsedMaintenances from "@/services/api/mostUsedMaintenancesAPI";
 
+import MostUsedMaintenancesData from "./MostUsedMaintenancesData";
+import MostUsedMaintenancesGraph from "./MostUsedMaintenancesGraph";
+
 function MostUsedMaintenances() {
     const { data, isFetching, refetch } = useMostUsedMaintenances();
 
@@ -18,21 +21,14 @@ function MostUsedMaintenances() {
                     onRefetchClick={() => refetch()}
                 />
 
-                {data !== undefined &&
-                    !isFetching &&
-                    data?.map(({ pozicia, pocet, popis }) => (
-                        <div
-                            key={`${pozicia}-${popis}`}
-                            className="flex w-1/3 items-center justify-start"
-                        >
-                            <p className="w-16 text-lg font-bold text-purple-500">
-                                {pocet}
-                            </p>
-                            <p className="w-[calc(100%-4rem)] text-lg">
-                                {popis}
-                            </p>
+                {data !== undefined && !isFetching && (
+                    <>
+                        <MostUsedMaintenancesGraph data={data} />
+                        <div className="mt-16">
+                            <MostUsedMaintenancesData data={data} />
                         </div>
-                    ))}
+                    </>
+                )}
             </div>
         </>
     );

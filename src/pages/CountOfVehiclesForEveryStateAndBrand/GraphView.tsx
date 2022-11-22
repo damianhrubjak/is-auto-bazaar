@@ -39,7 +39,6 @@ function GraphView({ data }: Props) {
         return datasets;
     }, [data]);
 
-    console.log({ data, graphDatasets });
     return (
         <div>
             <p></p>
