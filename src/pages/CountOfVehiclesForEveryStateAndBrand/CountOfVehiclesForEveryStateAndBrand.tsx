@@ -1,10 +1,17 @@
+import { useRef } from "react";
+
 import Heading from "@/components/Heading";
 import StatusBar from "@/components/StatusBar";
 import useCountOfVehiclesForEveryStateAndBrand from "@/services/api/countOfVehiclesForEveryStateAndBrandAPI";
 
+import DataView from "./DataView";
+import GraphView from "./GraphView";
+
 function CountOfVehiclesForEveryStateAndBrand() {
     const { data, isFetching, refetch } =
         useCountOfVehiclesForEveryStateAndBrand();
+    const graphViewRef = useRef<HTMLDivElement | null>(null);
+    const dataViewRef = useRef<HTMLDivElement | null>(null);
 
     return (
         <>
@@ -18,34 +25,40 @@ function CountOfVehiclesForEveryStateAndBrand() {
                     isFetching={isFetching}
                     onRefetchClick={() => refetch()}
                 />
-                <div className="grid w-full grid-cols-3 gap-6">
-                    {data !== undefined &&
-                        !isFetching &&
-                        data?.map(({ year, brands }) => (
-                            <div key={`${year}`} className="">
-                                <p className="my-5 w-full border-b-2 border-fuchsia-500 text-2xl font-bold text-fuchsia-500">
-                                    {year}
-                                </p>
-                                <>
-                                    {brands.map(({ brand, count }) => {
-                                        return (
-                                            <div
-                                                key={brand}
-                                                className="flex justify-between"
-                                            >
-                                                <p className="text-lg">
-                                                    {brand}
-                                                </p>
-                                                <p className="text-xl font-bold text-fuchsia-500">
-                                                    {count}
-                                                </p>
-                                            </div>
-                                        );
-                                    })}
-                                </>
-                            </div>
-                        ))}
+
+                <div className="flex w-80 items-start justify-center gap-2 rounded-xl bg-slate-600 p-2">
+                    <button
+                        onClick={() =>
+                            dataViewRef.current?.scrollIntoView({
+                                behavior: "smooth",
+                            })
+                        }
+                        className={`w-1/2 rounded-lg py-2 px-4 text-center transition duration-300`}
+                    >
+                        Data
+                    </button>
+                    <button
+                        onClick={() =>
+                            graphViewRef.current?.scrollIntoView({
+                                behavior: "smooth",
+                            })
+                        }
+                        className={`w-1/2 rounded-lg py-2 px-4 text-center transition duration-300`}
+                    >
+                        Grafy
+                    </button>
                 </div>
+
+                {data !== undefined && !isFetching && (
+                    <>
+                        <div ref={graphViewRef} className="mt-16">
+                            <GraphView data={data} />
+                        </div>
+                        <div ref={dataViewRef} className="mt-16">
+                            <DataView data={data} />
+                        </div>
+                    </>
+                )}
             </div>
         </>
     );
