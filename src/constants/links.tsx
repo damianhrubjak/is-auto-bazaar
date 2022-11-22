@@ -45,5 +45,10 @@ const navLinks = [
         text: "Predajcovia, ktorí nikdy nepredali auto",
         icon: <span className={`${numberIconClasses}`}>7</span>,
     },
+    {
+        to: "vehicles-in-specific-time",
+        text: "Výpis áut od určitého dátumu",
+        icon: <span className={`${numberIconClasses}`}>8</span>,
+    },
 ];
 export default navLinks;

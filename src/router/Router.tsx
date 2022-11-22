@@ -10,6 +10,7 @@ import MostUsedMaintenances from "@/pages/MostUsedMaintenances";
 import SellersWhoNeverSoldCar from "@/pages/SellersWhoNeverSoldCar";
 import TopThreeEmployees from "@/pages/TopThreeEmployees";
 import VehiclesFromState from "@/pages/VehiclesFromState";
+import VehiclesInSpecificTime from "@/pages/VehiclesInSpecificTime";
 
 const router = createBrowserRouter([
     {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
             {
                 path: "sellers-who-never-sold-car",
                 element: <SellersWhoNeverSoldCar />,
+            },
+            {
+                path: "vehicles-in-specific-time",
+                element: <VehiclesInSpecificTime />,
             },
         ],
     },

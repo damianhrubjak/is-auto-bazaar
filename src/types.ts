@@ -61,3 +61,16 @@ export interface GraphDataset {
     fill?: boolean;
     borderRadius?: number;
 }
+
+export interface VehicleInSpecificTime {
+    vin: string;
+    manufacturer_date: string;
+    engine_capacity: number;
+    engine_power: number;
+    color: string;
+    equipment: string;
+    fuel: string;
+    country: string;
+    brand: string;
+    model: string;
+}

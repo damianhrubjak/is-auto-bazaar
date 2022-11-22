@@ -9,6 +9,7 @@ import mostUsedMaintenances from "./routers/mostUsedMaintenances";
 import sellersWhoNeverSoldCar from "./routers/sellersWhoNeverSoldCar";
 import showVehiclesFromState from "./routers/showVehiclesFromState";
 import topThreeEmployeesForEveryMaintenance from "./routers/topThreeEmployeesForEveryMaintenance";
+import vehiclesInSpecificTime from "./routers/vehiclesInSpecificTime";
 
 dotenv.config({ path: "../.env" });
 
@@ -40,6 +41,7 @@ app.use(
 );
 app.use("/customers-who-bought-car", customersWhoBoughtCar);
 app.use("/sellers-who-never-sold-car", sellersWhoNeverSoldCar);
+app.use("/vehicles-in-specific-time", vehiclesInSpecificTime);
 
 app.listen(port, () => {
     console.log(`Server listening at http://localhost:${port}`);

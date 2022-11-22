@@ -13,6 +13,8 @@ class Database {
             password: process.env.DB_PASSWORD,
             connectString: process.env.DB_CONNECTION_STRING_NAME,
         };
+        oracleDB.fetchAsBuffer = [oracleDB.BLOB];
+        oracleDB.fetchAsString = [oracleDB.CLOB];
 
         oracleDB.outFormat = oracleDB.OUT_FORMAT_OBJECT;
 
