@@ -75,6 +75,11 @@ export interface VehicleInSpecificTime {
     model: string;
 }
 
+export interface CountOfElectricVehiclesFromCountry {
+    country: string;
+    count: number;
+}
+
 export interface AverageMaintenance {
     vin: string;
     count_od_days: number;
