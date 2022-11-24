@@ -20,7 +20,14 @@ function VehiclesInSpecificTime() {
         <>
             <Heading>
                 <span>
-                    Vozidlá od {fromDate} do {toDate}
+                    Predané vozidlá od
+                    <span className="mx-2 text-fuchsia-500">
+                        {new Date(fromDate).toLocaleDateString()}
+                    </span>
+                    do
+                    <span className="mx-2 text-fuchsia-500">
+                        {new Date(toDate).toLocaleDateString()}
+                    </span>
                 </span>
                 <div className="mt-2 h-2 w-24 rounded-full bg-gradient-to-br from-fuchsia-500 to-purple-500"></div>
             </Heading>
@@ -31,6 +38,7 @@ function VehiclesInSpecificTime() {
                     onRefetchClick={() => refetch()}
                 />
 
+                <p>Zadajte rozsah dátumov kúpy</p>
                 <div className="mb-8 flex w-full items-center gap-4">
                     <Input
                         type="date"

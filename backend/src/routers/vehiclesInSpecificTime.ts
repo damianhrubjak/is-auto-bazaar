@@ -8,11 +8,6 @@ vehiclesInSpecificTime.get("/", async (req: Request, res: Response) => {
     const fromDate = String(req.query.from || "2000-01-01");
     const toDate = String(req.query.to || "2022-01-01");
 
-    console.log(fromDate, toDate);
-    console.log(
-        `select * from table(WKSP_AUTOBAZAR.daj_vozidla_predane_v_danom_intervale(to_date(${fromDate}, 'YYYY-MM-DD'), to_date(${toDate}, 'YYYY-MM-DD')))`
-    );
-
     const connection = await Database.getConnection();
     const queryResult = await connection?.execute(
         `select VIN "vin" ,
