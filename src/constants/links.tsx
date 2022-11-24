@@ -60,5 +60,10 @@ const navLinks = [
         text: "Výpis áut a ich priemerný počet dní v údržbe",
         icon: <span className={`${numberIconClasses}`}>10</span>,
     },
+    {
+        to: "random-equipment",
+        text: "Náhodná výbava",
+        icon: <span className={`${numberIconClasses}`}>13</span>,
+    },
 ];
 export default navLinks;

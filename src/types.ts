@@ -75,7 +75,14 @@ export interface VehicleInSpecificTime {
     model: string;
 }
 
-export interface AverageMaintenanc {
+export interface AverageMaintenance {
     vin: string;
     count_od_days: number;
+}
+
+export interface Equipment {
+    Exterier: string[];
+    Extra: string[];
+    Infotainment: string[];
+    Interier: string[];
 }
