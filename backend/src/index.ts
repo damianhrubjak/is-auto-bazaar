@@ -8,6 +8,7 @@ import countOfVehiclesForEveryStateAndBrand from "./routers/countOfVehiclesForEv
 import customersWhoBoughtCar from "./routers/customersWhoBoughtCar";
 import employeesWithMostAds from "./routers/employeesWithMostAds";
 import mostUsedMaintenances from "./routers/mostUsedMaintenances";
+import randomEquipment from "./routers/randomEquipment";
 import sellersWhoNeverSoldCar from "./routers/sellersWhoNeverSoldCar";
 import showVehiclesFromState from "./routers/showVehiclesFromState";
 import topThreeEmployeesForEveryMaintenance from "./routers/topThreeEmployeesForEveryMaintenance";
@@ -49,6 +50,7 @@ app.use(
     countOfElectricVehiclesFromCountries
 );
 app.use("/average-maintenance", averageMaintenance);
+app.use("/random-equipment", randomEquipment);
 
 app.listen(port, () => {
     console.log(`Server listening at http://localhost:${port}`);

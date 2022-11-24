@@ -1,6 +1,6 @@
 import express, { Request, Response } from "express";
 
-import Database from "../Database";
+import Database from "../database";
 
 const customersWhoBoughtCar = express.Router();
 
