@@ -55,5 +55,10 @@ const navLinks = [
         text: "Výpis krajín a počtov predaných áut poháňaných na elektriku",
         icon: <span className={`${numberIconClasses}`}>9</span>,
     },
+    {
+        to: "average-maintenance",
+        text: "Výpis áut a ich priemerný počet dní v údržbe",
+        icon: <span className={`${numberIconClasses}`}>10</span>,
+    },
 ];
 export default navLinks;

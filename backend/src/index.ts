@@ -2,6 +2,7 @@ import cors from "cors";
 import * as dotenv from "dotenv";
 import express, { Response } from "express";
 
+import averageMaintenance from "./routers/averageMaintenance";
 import countOfElectricVehiclesFromCountries from "./routers/countOfElectricVehiclesFromCountries";
 import countOfVehiclesForEveryStateAndBrand from "./routers/countOfVehiclesForEveryStateAndBrand";
 import customersWhoBoughtCar from "./routers/customersWhoBoughtCar";
@@ -47,6 +48,7 @@ app.use(
     "/count-of-electric-vehicles-from-countries",
     countOfElectricVehiclesFromCountries
 );
+app.use("/average-maintenance", averageMaintenance);
 
 app.listen(port, () => {
     console.log(`Server listening at http://localhost:${port}`);

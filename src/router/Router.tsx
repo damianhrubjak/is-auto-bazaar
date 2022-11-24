@@ -2,6 +2,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 
 import NavBar from "@/components/NavBar";
 import AppLayout from "@/layouts/AppLayout";
+import AverageMaintenances from "@/pages/AverageMaintenances";
 import CountOfElectricVehiclesFromCountries from "@/pages/CountOfElectricVehiclesFromCountries";
 import CountOfVehiclesForEveryStateAndBrand from "@/pages/CountOfVehiclesForEveryStateAndBrand";
 import CustomersWhoBoughtCar from "@/pages/CustomersWhoBoughtCar";
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
             {
                 path: "count-of-electric-vehicles-from-countries",
                 element: <CountOfElectricVehiclesFromCountries />,
+            },
+            {
+                path: "average-maintenance",
+                element: <AverageMaintenances />,
             },
         ],
     },

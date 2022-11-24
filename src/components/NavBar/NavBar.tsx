@@ -33,7 +33,7 @@ function NavBar() {
                     }
                 />
             </button>
-            <div className="mt-16">
+            <div className="no-scrollbar my-16 h-[calc(100vh-12rem)] overflow-y-auto overflow-x-hidden">
                 {navLinks.map(({ to, text, icon }) => (
                     <NavLink
                         key={to}
