@@ -22,11 +22,15 @@ function VehiclesInSpecificTime() {
                 <span>
                     Predané vozidlá od
                     <span className="mx-2 text-fuchsia-500">
-                        {new Date(fromDate).toLocaleDateString()}
+                        {fromDate !== ""
+                            ? new Date(fromDate).toLocaleDateString()
+                            : null}
                     </span>
                     do
                     <span className="mx-2 text-fuchsia-500">
-                        {new Date(toDate).toLocaleDateString()}
+                        {toDate !== ""
+                            ? new Date(toDate).toLocaleDateString()
+                            : null}
                     </span>
                 </span>
                 <div className="mt-2 h-2 w-24 rounded-full bg-gradient-to-br from-fuchsia-500 to-purple-500"></div>
