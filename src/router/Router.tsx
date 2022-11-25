@@ -9,6 +9,7 @@ import CustomersWhoBoughtCar from "@/pages/CustomersWhoBoughtCar";
 import EmployeesWithMostAds from "@/pages/EmployeesWithMostAds";
 import Home from "@/pages/Home";
 import MostUsedMaintenances from "@/pages/MostUsedMaintenances";
+import PeoplesWhoBoughtVehicleInGivenTime from "@/pages/PeoplesWhoBoughtVehicleInGivenTime";
 import RandomEquipment from "@/pages/RandomEquipment/RandomEquipment";
 import SellersWhoNeverSoldCar from "@/pages/SellersWhoNeverSoldCar";
 import TopThreeEmployees from "@/pages/TopThreeEmployees";
@@ -67,6 +68,10 @@ const router = createBrowserRouter([
             {
                 path: "average-maintenance",
                 element: <AverageMaintenances />,
+            },
+            {
+                path: "peoples-who-bought-vehicle-in-given-time",
+                element: <PeoplesWhoBoughtVehicleInGivenTime />,
             },
             {
                 path: "random-equipment",

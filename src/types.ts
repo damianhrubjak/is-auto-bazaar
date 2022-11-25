@@ -91,3 +91,11 @@ export interface Equipment {
     Infotainment: string[];
     Interier: string[];
 }
+
+export interface PeopleWhoBoughtVehicleInGivenTime {
+    id_number: string;
+    name: string;
+    surname: string;
+    car_id: string;
+    date_of_purchase: string;
+}

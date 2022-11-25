@@ -61,6 +61,11 @@ const navLinks = [
         icon: <span className={`${numberIconClasses}`}>10</span>,
     },
     {
+        to: "peoples-who-bought-vehicle-in-given-time",
+        text: "Zákazníci, ktorí si kúpili auto v danom mesiaci",
+        icon: <span className={`${numberIconClasses}`}>11</span>,
+    },
+    {
         to: "random-equipment",
         text: "Náhodná výbava",
         icon: <span className={`${numberIconClasses}`}>12</span>,
