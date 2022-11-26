@@ -70,5 +70,10 @@ const navLinks = [
         text: "Náhodná výbava",
         icon: <span className={`${numberIconClasses}`}>12</span>,
     },
+    {
+        to: "images",
+        text: "Obr",
+        icon: <span className={`${numberIconClasses}`}>13</span>,
+    },
 ];
 export default navLinks;

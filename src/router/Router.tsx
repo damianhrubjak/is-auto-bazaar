@@ -8,6 +8,7 @@ import CountOfVehiclesForEveryStateAndBrand from "@/pages/CountOfVehiclesForEver
 import CustomersWhoBoughtCar from "@/pages/CustomersWhoBoughtCar";
 import EmployeesWithMostAds from "@/pages/EmployeesWithMostAds";
 import Home from "@/pages/Home";
+import Images from "@/pages/Images";
 import MostUsedMaintenances from "@/pages/MostUsedMaintenances";
 import PeoplesWhoBoughtVehicleInGivenTime from "@/pages/PeoplesWhoBoughtVehicleInGivenTime";
 import RandomEquipment from "@/pages/RandomEquipment/RandomEquipment";
@@ -76,6 +77,10 @@ const router = createBrowserRouter([
             {
                 path: "random-equipment",
                 element: <RandomEquipment />,
+            },
+            {
+                path: "images",
+                element: <Images />,
             },
         ],
     },

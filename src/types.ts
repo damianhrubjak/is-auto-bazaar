@@ -99,3 +99,10 @@ export interface PeopleWhoBoughtVehicleInGivenTime {
     car_id: string;
     date_of_purchase: string;
 }
+
+export interface Image {
+    id: number;
+    name: string;
+    mime_type: string;
+    image: string;
+}

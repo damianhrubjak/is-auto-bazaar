@@ -7,6 +7,7 @@ import countOfElectricVehiclesFromCountries from "./routers/countOfElectricVehic
 import countOfVehiclesForEveryStateAndBrand from "./routers/countOfVehiclesForEveryStateAndBrand";
 import customersWhoBoughtCar from "./routers/customersWhoBoughtCar";
 import employeesWithMostAds from "./routers/employeesWithMostAds";
+import files from "./routers/files";
 import mostUsedMaintenances from "./routers/mostUsedMaintenances";
 import peoplesWhoBoughtVehicleInGivenTime from "./routers/peoplesWhoBoughtVehicleInGivenTime";
 import randomEquipment from "./routers/randomEquipment";
@@ -56,6 +57,7 @@ app.use(
     peoplesWhoBoughtVehicleInGivenTime
 );
 app.use("/random-equipment", randomEquipment);
+app.use("/files", files);
 
 app.listen(port, () => {
     console.log(`Server listening at http://localhost:${port}`);
