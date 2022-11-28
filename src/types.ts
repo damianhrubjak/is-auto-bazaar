@@ -122,3 +122,15 @@ export interface Image {
     mime_type: string;
     image: string;
 }
+
+export interface AdvertisementWithImages {
+    advertisement: {
+        vin: string;
+        color: string;
+        brand: string;
+        model: string;
+    };
+    name: string;
+    image: Buffer;
+    mime_type: string;
+}

@@ -2,6 +2,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 
 import NavBar from "@/components/NavBar";
 import AppLayout from "@/layouts/AppLayout";
+import AdsWithImages from "@/pages/AdsWithImages";
 import AverageMaintenances from "@/pages/AverageMaintenances";
 import CountOfElectricVehiclesFromCountries from "@/pages/CountOfElectricVehiclesFromCountries";
 import CountOfVehiclesForEveryStateAndBrand from "@/pages/CountOfVehiclesForEveryStateAndBrand";
@@ -81,6 +82,10 @@ const router = createBrowserRouter([
             {
                 path: "images",
                 element: <Images />,
+            },
+            {
+                path: "ads-with-images",
+                element: <AdsWithImages />,
             },
         ],
     },

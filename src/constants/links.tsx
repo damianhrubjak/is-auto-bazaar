@@ -75,5 +75,10 @@ const navLinks = [
         text: "Všetky nahrané obrázky",
         icon: <span className={`${numberIconClasses}`}>13</span>,
     },
+    {
+        to: "ads-with-images",
+        text: "Inzeráty s obrázkami",
+        icon: <span className={`${numberIconClasses}`}>14</span>,
+    },
 ];
 export default navLinks;
