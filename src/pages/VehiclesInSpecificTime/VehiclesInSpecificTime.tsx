@@ -20,7 +20,7 @@ function VehiclesInSpecificTime() {
         <>
             <Heading>
                 <span>
-                    Predané vozidlá od
+                    Predané vozidlá v zadanom intervale od
                     <span className="mx-2 text-fuchsia-500">
                         {fromDate !== ""
                             ? new Date(fromDate).toLocaleDateString()

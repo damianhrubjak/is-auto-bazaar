@@ -20,27 +20,40 @@ function SellersWhoNeverSoldCar() {
 
                 {data !== undefined &&
                     !isFetching &&
-                    data?.map(({ id, id_osoba, name, surname }) => (
-                        <div
-                            key={`${id}`}
-                            className="flex w-2/3 items-center justify-start"
-                        >
-                            <p className="w-[calc(100%-4rem)] text-lg font-bold text-purple-500">
-                                {id}
-                            </p>
-                            <p className="w-[calc(100%-4rem)] text-lg">
-                                {id_osoba}
-                            </p>
-                            <div className="flex ">
-                                <p className="w-[calc(100%-4rem)] text-lg">
-                                    {name}
+                    data?.map(
+                        ({
+                            id,
+                            id_person,
+                            name,
+                            surname,
+                            actual,
+                            duration,
+                        }) => (
+                            <div
+                                key={`${id}`}
+                                className="flex w-full items-center justify-start"
+                            >
+                                <p className="w-1/5 text-lg font-bold text-purple-500">
+                                    {id}
                                 </p>
-                                <p className="w-[calc(100%-4rem)] text-lg">
-                                    {surname}
-                                </p>
+                                <p className="w-1/5 text-lg">{id_person}</p>
+                                <div className="flex w-4/5">
+                                    <p className="w-[calc(100%-4rem)] text-lg">
+                                        {name}
+                                    </p>
+                                    <p className="w-[calc(100%-4rem)] text-lg">
+                                        {surname}
+                                    </p>
+                                    <p className="w-[calc(100%-4rem)] text-lg">
+                                        {actual ? "Aktuálny" : "Bývalý"}
+                                    </p>
+                                    <p className="w-[calc(100%-4rem)] text-lg">
+                                        {duration}
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        )
+                    )}
             </div>
         </>
     );

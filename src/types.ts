@@ -48,9 +48,11 @@ export interface CustomerWhoBoughtCar {
 
 export interface SellerWhoNeverSoldCar {
     id: number;
-    id_osoba: string;
+    id_person: string;
     name: string;
     surname: string;
+    duration: number;
+    actual: boolean;
 }
 
 export interface GraphDataset {
@@ -82,7 +84,11 @@ export interface CountOfElectricVehiclesFromCountry {
 
 export interface AverageMaintenance {
     vin: string;
-    count_od_days: number;
+    country: string;
+    color: string;
+    model: string;
+    brand: string;
+    count_of_days: number;
 }
 
 export interface Equipment {

@@ -14,6 +14,8 @@ const fetchAverageMaintenance = async (): Promise<AverageMaintenance[]> => {
 function useAverageMaintenance() {
     return useQuery(["average-maintenance"], fetchAverageMaintenance, {
         staleTime: 60 * 1000,
+        refetchOnMount: false,
+        refetchOnWindowFocus: false,
     });
 }
 export default useAverageMaintenance;

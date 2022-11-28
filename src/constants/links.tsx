@@ -17,7 +17,7 @@ const navLinks = [
     },
     {
         to: "employees-with-most-ads",
-        text: "Zamestnanci s najviac inzerátmi",
+        text: "Najlepší predajcovia",
         icon: <span className={`${numberIconClasses}`}>2</span>,
     },
     {
@@ -37,7 +37,7 @@ const navLinks = [
     },
     {
         to: "customers-who-bought-car",
-        text: "Zákazníci vozidiel podľa roku a ceny",
+        text: "Zákazníci, čo si kúpili danú značku za danú cenu",
         icon: <span className={`${numberIconClasses}`}>6</span>,
     },
     {
@@ -47,7 +47,7 @@ const navLinks = [
     },
     {
         to: "vehicles-in-specific-time",
-        text: "Výpis áut od určitého dátumu",
+        text: "Predané vozidlá v zadanom intervale",
         icon: <span className={`${numberIconClasses}`}>8</span>,
     },
     {
@@ -57,7 +57,7 @@ const navLinks = [
     },
     {
         to: "average-maintenance",
-        text: "Výpis áut a ich priemerný počet dní v údržbe",
+        text: "Priemerný počet dní v údržbe, pre každé vozidlo",
         icon: <span className={`${numberIconClasses}`}>10</span>,
     },
     {
@@ -72,7 +72,7 @@ const navLinks = [
     },
     {
         to: "images",
-        text: "Obr",
+        text: "Všetky nahrané obrázky",
         icon: <span className={`${numberIconClasses}`}>13</span>,
     },
 ];
