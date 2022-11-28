@@ -5,8 +5,8 @@ import Input from "@/components/Input";
 import StatusBar from "@/components/StatusBar";
 import useVehiclesFromState from "@/services/api/vehiclesFromStateAPI";
 
-function MostUsedMaintenances() {
-    const [countryId, setCountryId] = useState("");
+function VehiclesFromState() {
+    const [countryId, setCountryId] = useState("SK");
     const [maintenancesCount, setMaintenancesCount] = useState(0);
 
     const { data, isFetching, refetch } = useVehiclesFromState(
@@ -17,7 +17,7 @@ function MostUsedMaintenances() {
     return (
         <>
             <Heading>
-                <span>Vozidla z danej krajiny</span>
+                <span>Vozidlá z danej krajiny</span>
                 <div className="mt-2 h-2 w-24 rounded-full bg-gradient-to-br from-fuchsia-500 to-purple-500"></div>
             </Heading>
 
@@ -34,6 +34,7 @@ function MostUsedMaintenances() {
                         onDebouncedChange={(event) => {
                             setCountryId(event.target.value);
                         }}
+                        defaultValue="SK"
                     />
                     <Input
                         type="number"
@@ -45,19 +46,42 @@ function MostUsedMaintenances() {
                     />
                 </div>
 
-                {data !== undefined &&
-                    !isFetching &&
-                    data?.map(({ vin }) => (
-                        <div
-                            key={`${vin}`}
-                            className="flex w-1/3 items-center justify-start"
-                        >
-                            <p className="w-full">{vin}</p>
+                {data !== null && !isFetching && (
+                    <div className="w-full rounded-md bg-slate-700 p-4">
+                        <div className="flex items-center justify-between">
+                            <h2 className="text-6xl font-bold text-fuchsia-500">
+                                {data?.country}
+                            </h2>
+                            <img
+                                src={`https://flagcdn.com/h60/${data?.country.toLowerCase()}.png`}
+                                alt="South Africa"
+                            />
                         </div>
-                    ))}
+                        <div className="mt-8 grid grid-cols-4 gap-4">
+                            {data?.vehicles?.map(
+                                ({ vin, model, brand, count }) => (
+                                    <div
+                                        key={`${vin}`}
+                                        className="w-full rounded-md bg-slate-800 p-4"
+                                    >
+                                        <h3 className="text-xl font-bold text-fuchsia-500">
+                                            {brand} {model}
+                                        </h3>
+                                        <p className="mt-2 w-full text-lg">
+                                            {vin}
+                                        </p>
+                                        <p className="mt-2 w-full text-lg">
+                                            {count}
+                                        </p>
+                                    </div>
+                                )
+                            )}
+                        </div>
+                    </div>
+                )}
             </div>
         </>
     );
 }
 
-export default MostUsedMaintenances;
+export default VehiclesFromState;

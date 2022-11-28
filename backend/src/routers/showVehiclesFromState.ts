@@ -4,15 +4,25 @@ import Database from "../database";
 
 const showVehiclesFromState = express.Router();
 
+interface Row {
+    value: string;
+}
+
 showVehiclesFromState.get("/", async (req: Request, res: Response) => {
     const fromState = String(req.query.state || "SK");
     const countOfMaintenances = Number(req.query.count || 0);
 
     const connection = await Database.getConnection();
     const queryResult = await connection?.execute(
-        `SELECT COLUMN_VALUE as "vin" FROM TABLE(WKSP_AUTOBAZAR.vypis_vozidla_z_krajiny('${fromState}', ${countOfMaintenances}))`
+        `SELECT WKSP_AUTOBAZAR.vypis_vozidla_z_krajiny('${fromState}', ${countOfMaintenances}) "value" from dual`
     );
-    res.json({ data: queryResult?.rows });
+
+    const jsonValue =
+        queryResult?.rows === undefined
+            ? ""
+            : (queryResult?.rows[0] as Row).value;
+
+    res.json({ data: JSON.parse(jsonValue) });
 });
 
 export default showVehiclesFromState;

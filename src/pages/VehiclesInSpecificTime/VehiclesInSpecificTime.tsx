@@ -8,8 +8,8 @@ import useVehiclesInSpecificTime from "@/services/api/vehiclesInSpecificTime";
 import VehicleItem from "./VehicleItem";
 
 function VehiclesInSpecificTime() {
-    const [fromDate, setFromDate] = useState("");
-    const [toDate, setToDate] = useState("");
+    const [fromDate, setFromDate] = useState("2022-01-01");
+    const [toDate, setToDate] = useState("2022-11-01");
 
     const { data, isFetching, refetch } = useVehiclesInSpecificTime(
         fromDate,

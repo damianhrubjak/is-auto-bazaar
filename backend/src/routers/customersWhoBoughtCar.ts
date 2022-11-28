@@ -6,7 +6,7 @@ const customersWhoBoughtCar = express.Router();
 
 customersWhoBoughtCar.get("/", async (req: Request, res: Response) => {
     const brandName = String(req.query.brand || "BMW");
-    const price = Number(req.query.price) || 5000;
+    const price = Number(req.query.price) || 15000;
 
     const connection = await Database.getConnection();
     const queryResult = await connection?.execute(

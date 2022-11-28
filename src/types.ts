@@ -11,6 +11,16 @@ export interface MostUsedMaintenance {
     popis: string;
 }
 
+export interface VehiclesFromState {
+    country: string;
+    vehicles: {
+        vin: string;
+        brand: string;
+        model: string;
+        count: number;
+    }[];
+}
+
 export interface EmployeeWithMostAds {
     rod_cislo: string;
     meno: string;

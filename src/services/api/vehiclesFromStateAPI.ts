@@ -2,10 +2,12 @@ import axios from "axios";
 
 import { useQuery } from "@tanstack/react-query";
 
+import { VehiclesFromState } from "@/types";
+
 const fetchVehiclesFromState = async (
     state: string,
     maintenancesCount: number
-): Promise<{ vin: string }[]> => {
+): Promise<VehiclesFromState> => {
     const { data } = await axios.get(
         `http://localhost:3000/show-vehicles-from-state?state=${state}&count=${maintenancesCount}`
     );

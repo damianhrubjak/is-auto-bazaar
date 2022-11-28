@@ -11,15 +11,15 @@ vehiclesInSpecificTime.get("/", async (req: Request, res: Response) => {
     const connection = await Database.getConnection();
     const queryResult = await connection?.execute(
         `select VIN "vin" ,
-DAT_VYROBY "manufacturer_date" ,
-OBJ_MOTORA "engine_capacity" ,
-VYKON_MOTORA "engine_power" ,
-FARBA "color" ,
-VYBAVA "equipment" ,
-NAZOV_POH_HMOTY "fuel" ,
-KRAJINA "country" ,
-ZNACKA "brand" ,
-MODEL_AUTA "model" from table(WKSP_AUTOBAZAR.daj_vozidla_predane_v_danom_intervale(to_date('${fromDate}', 'YYYY-MM-DD'), to_date('${toDate}', 'YYYY-MM-DD')))`
+            DAT_VYROBY "manufacturer_date" ,
+            OBJ_MOTORA "engine_capacity" ,
+            VYKON_MOTORA "engine_power" ,
+            FARBA "color" ,
+            VYBAVA "equipment" ,
+            NAZOV_POH_HMOTY "fuel" ,
+            KRAJINA "country" ,
+            ZNACKA "brand" ,
+            MODEL_AUTA "model" from table(WKSP_AUTOBAZAR.daj_vozidla_predane_v_danom_intervale(to_date('${fromDate}', 'YYYY-MM-DD'), to_date('${toDate}', 'YYYY-MM-DD')))`
     );
     res.json({ data: queryResult?.rows });
 });
